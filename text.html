@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            color: #000;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="text"] {
+            width: 50%; /* Đặt chiều rộng cho ô tên */
+        }
+        .sex-group {
+            display: inline-block; /* Hiển thị thành hàng */
+            margin: 10px 0; /* Thêm khoảng cách cho nhóm giới tính */
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label>Sex:</label>
+            <div class="sex-group">
+                <label><input type="radio" name="sex" value="male" required> Male</label>
+                <label><input type="radio" name="sex" value="female"> Female</label>
+            </div>
+
+            <br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">Select an option</option>
+                <option value="vn">Vietnam</option>
+                <option value="us">United States</option>
+                <option value="jp">Japan</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label><input type="checkbox" name="subscribe"> Subscribe?</label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
